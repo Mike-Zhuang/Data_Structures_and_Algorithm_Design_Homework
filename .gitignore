@@ -60,3 +60,4 @@ node_modules/
 core
 vgcore.*
 *.prof
+test.cpp
