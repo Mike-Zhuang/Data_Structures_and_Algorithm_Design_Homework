@@ -1,0 +1,66 @@
+# C++ 编译产物
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+
+# 可执行文件（无扩展名）
+!*.cpp
+!*.h
+!*.hpp
+!Makefile
+!*.txt
+!*.md
+
+# macOS 特定文件
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# 调试符号和 Xcode 相关
+*.dSYM/
+*.su
+*.gch
+*.pch
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# CMake 和构建目录
+CMakeFiles/
+cmake_install.cmake
+CMakeCache.txt
+build/
+dist/
+Debug/
+Release/
+
+# 依赖和包管理
+*.a
+*.lib
+dependencies/
+node_modules/
+
+# 编辑器临时文件
+*.bak
+*.tmp
+*.swp
+*.swo
+*~
+.#*
+
+# 其他临时文件
+*.tmp
+*.log
+core
+vgcore.*
+*.prof
