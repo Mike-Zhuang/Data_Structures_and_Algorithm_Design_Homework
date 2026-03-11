@@ -1,16 +1,12 @@
-# C++ 编译产物
-*.o
-*.a
-*.so
-*.dylib
-*.dll
-*.exe
-*.out
-
-# 可执行文件（无扩展名）
+# 忽略所有文件和目录，然后白名单保护源代码和文档
+*
+!*/
+!.gitignore
 !*.cpp
 !*.h
 !*.hpp
+!*.c
+!*.cc
 !Makefile
 !*.txt
 !*.md
