@@ -96,7 +96,7 @@ int main()
                 CardList.len--;
             }
         }
-        else if (strcmp(command, "Reverse") == 0)
+        else if (strcmp(command, "Revert") == 0)
         {
             Card temp;
             for (int i = 0; i < CardList.len / 2; i++)
@@ -117,7 +117,7 @@ int main()
             // 匹配拿出来，不匹配留下来而且往前推
             for (int i = 0; i < CardList.len; i++)
             {
-                if (strcmp(CardList.elem[i].number, goal) == 0)
+                if (strcmp(CardList.elem[i].flower, goal) == 0)
                 {
                     Extracted[out++] = CardList.elem[i];
                 }
@@ -125,13 +125,14 @@ int main()
                 {
                     CardList.elem[in++] = CardList.elem[i];
                 }
-                CardList.len = in; // 原来的缩小
             }
+            CardList.len = in; // 原来的缩小
+
             if (out > 0)
             { // 冒泡排序
-                for (int i = 0; i < n - 1; i++)
+                for (int i = 0; i < out - 1; i++)
                 {
-                    for (int j = 0; j < n - 1 - i; j++)
+                    for (int j = 0; j < out - 1 - i; j++)
                     {
                         if (number(Extracted[j].number) > number(Extracted[j + 1].number))
                         {
@@ -156,7 +157,7 @@ int main()
 
     if ((CardList.len) == 0)
     {
-        cout << " NULL" << endl;
+        cout << "NULL" << endl;
     }
     else
     {
