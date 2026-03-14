@@ -8,8 +8,10 @@
 !*.c
 !*.cc
 !Makefile
+!LICENSE
 !*.txt
 !*.md
+!*.docx
 
 # macOS 特定文件
 .DS_Store
