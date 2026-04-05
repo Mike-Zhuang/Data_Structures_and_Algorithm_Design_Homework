@@ -1,5 +1,6 @@
 #include <iostream>
 #include <algorithm>
+#include <string>
 
 using namespace std;
 
@@ -10,7 +11,7 @@ struct BiTNode
     int right;
 };
 
-BiTNode BT1[105], BT2[105];
+BiTNode BT1[10105], BT2[10105];
 
 // 返回某个节点有没有父亲，如果有赋值true，否则赋值false，最后输出那个赋值为false的作为root
 int MakeBiTree(BiTNode BT[])
@@ -23,26 +24,26 @@ int MakeBiTree(BiTNode BT[])
         return -1;
     }
 
-    bool checkfather[105] = {false};
-    char lc, rc;
+    bool checkfather[10105] = {false};
+    string lc, rc;
     for (int i = 0; i < n; i++)
     {
         cin >> BT[i].data >> lc >> rc;
 
-        if (lc != '-')
+        if (lc != "-")
         {
-            BT[i].left = lc - '0';
-            checkfather[lc - '0'] = true; // 编号为lc的节点有父亲了
+            BT[i].left = stoi(lc);
+            checkfather[stoi(lc)] = true; // 编号为lc的节点有父亲了
         }
         else
         {
             BT[i].left = -1;
         }
 
-        if (rc != '-')
+        if (rc != "-")
         {
-            BT[i].right = rc - '0';
-            checkfather[rc - '0'] = true; // 编号为rc的节点有父亲了
+            BT[i].right = stoi(rc);
+            checkfather[stoi(rc)] = true; // 编号为rc的节点有父亲了
         }
         else
         {
