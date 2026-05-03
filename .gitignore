@@ -12,6 +12,7 @@
 !*.txt
 !*.md
 !*.docx
+!*.py
 
 # macOS 特定文件
 .DS_Store

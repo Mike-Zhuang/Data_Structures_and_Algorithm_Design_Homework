@@ -1,0 +1,70 @@
+/**
+ * @file    template.cpp
+ * @name    p57模板程序
+ * @date    2022-11-22
+ */
+
+#include <iostream>
+#include <algorithm>
+#include <cstdio>
+#include <cstdlib>
+#include <ctime>
+#include <cmath>
+#include <string>
+#include <vector>
+#include <queue>
+#include <stack>
+#include <map>
+#include <set>
+using namespace std;
+
+/********************************/
+/*     以下是你需要提交的代码     */
+/********************************/
+class Solution
+{
+public:
+    std::vector<int> mySort(std::vector<int> &nums)
+    {
+        // 这里填写你的代码
+
+        // 5. 冒泡排序
+
+        int n = nums.size();
+
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = 0; j < n - 1 - i; j++)
+            {
+                if (nums[j] > nums[j + 1])
+                {
+                    swap(nums[j], nums[j + 1]);
+                }
+            }
+        }
+        return nums;
+    }
+};
+/********************************/
+/*     以上是你需要提交的代码     */
+/********************************/
+
+int main()
+{
+    int n;
+    std::cin >> n;
+    std::vector<int> nums(n);
+    for (int i = 0; i < n; i++)
+    {
+        std::cin >> nums[i];
+    }
+    Solution s;
+    std::vector<int> after_sort(s.mySort(nums));
+    std::cout << after_sort[0];
+    for (int i = 1; i < n; i++)
+    {
+        std::cout << ' ' << after_sort[i];
+    }
+    std::cout << std::endl;
+    return 0;
+}
